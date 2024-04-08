@@ -16,17 +16,10 @@
     <div id="square" onclick="makeGreen()" onmouseover="makeGrey()" onmouseout="Red"></div>
 
     <script>
-        function makeGreen(){
-            document.getElementById('square').style.background = 'green';
-
-        }
-        function makeRed(){
-            document.getElementById('square').style.background = 'red';
-
-        }
-        function makeGrey(){
-            document.getElementById('square').style.background = 'grey';
-
+        let square = document.getElementById('square')
+        
+        function changeColour(colour){
+            document.getElementById('square').style.background = colour;
         }
 
     </script>
