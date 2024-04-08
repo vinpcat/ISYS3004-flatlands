@@ -8,7 +8,7 @@ let square = document.getElementById('square')
 
 // 3. Link element, event to the functionality
 //  i.e add an event listener
-square.addEventListener('click', (event) => changeColour('green'));
+square.addEventListener('click', (event) => showMessage());
 square.addEventListener('mouseover', (event) => changeColour('grey'));
 square.addEventListener('mouseout', (event) => changeColour('red'));
 
@@ -17,9 +17,13 @@ function greeting(){
     console.log("Welcome to Flatland")
     words.innerHTML = "Welcome to Flatland.<br> I am Square!";
 }
-words.addEventListener('load', (event) => greeting())
+// words.addEventListener('load', (event) => greeting())
+document.unload = greeting()
 
-
+function showMessage(){
+    let message = "Build a " + createBuzzwordPhrase();
+    words.innerHTML - message; 
+}
 
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
